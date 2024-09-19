@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+*{
+    text-decoration: none;
+}
+
+.navbar{
+    background: white; font-family: Times New Roman; padding-right: 15px;padding-left: 15px;
+}
+
+.navbar-container{
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.logo{
+    width: 200px; font-size: 21px;
+}
+
+li{
+    list-style: none; display: inline-block;
+}
+
+li a{
+    color: rgb(64, 64, 212); font-size: 18px; font-weight: bold; margin-right: 10px;
+
+}
+
+button{
+    background-color: rgb(64, 64, 212); margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+
+button a{
+    color: white; font-size: 15px; font-weight: bold;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1, h2 {
+    margin-bottom: 2%;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#upload-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 20%;
+    text-wrap: nowrap;
+}
+
+#upload-progress {
+    margin-top: 1rem;
+}
+
+#progress-bar {
+    width: 100%;
+}
+
+#results-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#transcript, #feedback {
+    margin-bottom: 1rem;
+}
+
+#audio-player {
+    margin-top: 1rem;
+}
+
+audio {
+    width: 100%;
+}
+
+.row{
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex-direction: row;
+}
+
+.feaures-container{
+    display: flex;
+    flex: 1;
+}

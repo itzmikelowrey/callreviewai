@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallReviewAI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo"><a href="CallReviewAI_Logo.png"><img src="CallReviewAI_Logo.png" alt="CallReviewAI Logo"></a></div>
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Solutions</a>
+          </li>
+          <li>
+            <a href="#">Upload</a>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <button>
+            <a href="#">Sign In</a>
+          </button>
+        <button>
+            <a href="#">Sign Up</a>
+          </button>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="upload-section">
+        <h2>Upload Your Call Recording</h2>
+        <div id="drop-area">
+          <p>Drag and drop your audio file here or</p>
+          <button id="upload-button">Choose File</button>
+          <input type="file" id="file-input" accept="audio/*" hidden />
+        </div>
+        <div id="upload-progress" hidden>
+          <progress id="progress-bar" value="0" max="100"></progress>
+          <p id="progress-text">Uploading: 0%</p>
+        </div>
+      </section>
+      <section id="results-section" hidden>
+        <h2>Call Analysis Results</h2>
+        <div id="transcript"></div>
+        <div id="feedback"></div>
+        <div id="audio-player">
+          <audio id="audio-element" controls></audio>
+        </div>
+      </section>
+      <br>
+      <section id="features-section">
+        <h2>Features</h2>
+        <div class="row">
+        <div id="features-container">
+          <div class="feature-card">
+            <h3>Call Transcription</h3>
+            <p> - Accurately transcribe your call recordings to create <br> a searchable transcript.</p>
+            <p> - Identify key points and action items discussed during the call.</p>
+            <p> - Save time and effort in reviewing call recordings.</p>
+            <div class="image-container">
+              <img src="hero_pepe.png" alt="Hero Pepe">
+            </div>
+          </div>
+        </div>
+        </div>
+          </section>
+        </main>
+        <script src="js/main.js"></script>
+      </body>
+      </html>
+      
