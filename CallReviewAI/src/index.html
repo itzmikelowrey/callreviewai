@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <!--Navbar Section-->
     <nav class="navbar">
       <div class="navbar-container">
-        <div class="logo"><a href="CallReviewAI_Logo.png"><img src="CallReviewAI_Logo.png" alt="CallReviewAI Logo"></a></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/CallReviewAI_Logo.png" alt="CallReviewAI Logo" height="75px" width="225px">
+          </a>
+        </div>
         <ul>
           <li>
-            <a href="#">Features</a>
+            <a href="#features-section">Features</a>
           </li>
           <li>
-            <a href="#">Solutions</a>
+            <a href="#solutions-section">Solutions</a>
           </li>
           <li>
-            <a href="#">Upload</a>
+            <a href="#upload-section">Upload</a>
           <li>
-            <a href="#">Pricing</a>
+            <a href="#pricing-section">Pricing</a>
           </li>
           <button>
             <a href="#">Sign In</a>
@@ -32,6 +37,7 @@
       </div>
     </nav>
     <main>
+      <!--Upload Section-->
       <section id="upload-section">
         <h2>Upload Your Call Recording</h2>
         <div id="drop-area">
@@ -44,6 +50,7 @@
           <p id="progress-text">Uploading: 0%</p>
         </div>
       </section>
+      <!--Results Section-->
       <section id="results-section" hidden>
         <h2>Call Analysis Results</h2>
         <div id="transcript"></div>
@@ -52,24 +59,102 @@
           <audio id="audio-element" controls></audio>
         </div>
       </section>
-      <br>
-      <section id="features-section">
-        <h2>Features</h2>
-        <div class="row">
-        <div id="features-container">
-          <div class="feature-card">
-            <h3>Call Transcription</h3>
-            <p> - Accurately transcribe your call recordings to create <br> a searchable transcript.</p>
-            <p> - Identify key points and action items discussed during the call.</p>
-            <p> - Save time and effort in reviewing call recordings.</p>
-            <div class="image-container">
-              <img src="hero_pepe.png" alt="Hero Pepe">
+      <!--Features Section-->
+      
+      <section id="features-section" class="column-reverse">
+            <div class="d2">
+              <h2>Features</h2>
+            <p> - Accurately transcribe your call recordings to create  a searchable transcript.
+                - Save time and effort in reviewing call recordings.</p>
             </div>
-          </div>
+            <div class="d1">
+              <img src="images/hero_pepe.png" alt="Hero Pepe" height="200" width="300
+              ">
+            </div>
+          </section>
+          <!--Solutions Section-->
+          <section id="solutions-section" class="column">
+              <div class="d2">
+            <h2>The Problem?</h2>
+            <p>You listen to your calls, but it's hard to know
+          where you went wrong. Without an expert guide, you
+          might not even realize you're making the same mistakes
+        over and over again. Experience alone can't uncover
+          everything. 
+         — That's why we created CallReviewAI</p>
         </div>
+         <div class="d1">
+          <img src="images/sad_pepe_calling.png" alt="Sad Pepe Calling">
+         </div>
         </div>
           </section>
+          <!--Pricing Section-->  
+          <hr />
+          <div  id="pricing-section" class="pricing-container">
+          <div class="wrapper">
+            <div class="single-pricing">
+              <div class="deal">
+                <h2><span>Basic</span></h2>
+              </div>
+              <div class="deal-info">
+                <h2>Free</h2>
+                <p>- 60 minutes of transcribed calls</p><br>
+                <p>- Basic call analysis</p><br>
+                <p>- Basic feedback</p><br>
+                <button>Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="single-pricing">
+              <div class="deal">
+                <h2><span>Pro</span></h2>
+              </div>
+              <div class="deal-info">
+                <h2>$14.99</h2>
+                <p> - 600 minutes of transcribed calls</p><br>
+                <p> - Advanced call analysis</p><br>
+                <p> - Detailed feedback</p><br>
+                <button>Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="single-pricing">
+              <div class="deal">
+                <h2><span>Business</span></h2>
+              </div>
+              <div class="deal-info">
+                <h2>$19.99</h2>
+                <p> - 1200 minutes of transcribed calls</p><br>
+                <p> - Advanced call analysis</p><br>
+                <p> - Detailed feedback</p><br>
+                <button>Sign Up</button>
+              </div>
+            </div>
+          </div>
+          </div>
         </main>
+        <!--Footer Section-->
+        <hr />
+        <footer>
+          <div class="footer-container">
+            <div class="footer-column">
+              <h3>CallReviewAI</h3>
+              <p>Your AI-powered call review assistant.</p>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#features-section">Features</a></li>
+                <li><a href="#solutions-section">Solutions</a></li>
+                <li><a href="#upload-section">Upload</a></li>
+                <li><a href="#pricing-section">Pricing</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+          <p>&copy; 2024 CallReviewAI. All rights reserved.</p>
+        </footer>
         <script src="js/main.js"></script>
       </body>
       </html>

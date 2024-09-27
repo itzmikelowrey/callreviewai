@@ -18,7 +18,7 @@ header {
 }
 
 .navbar{
-    background: white; font-family: Times New Roman; padding-right: 15px;padding-left: 15px;
+    background: rgb(243, 243, 248); font-family: Times New Roman; padding-right: 15px;padding-left: 15px;
 }
 
 .navbar-container{
@@ -26,7 +26,7 @@ header {
 }
 
 .logo{
-    width: 200px; font-size: 21px;
+    width: 200px; font-size: 21px; padding-left: -100%;
 }
 
 li{
@@ -46,6 +46,9 @@ button a{
     color: white; font-size: 15px; font-weight: bold;
 }
 
+body{
+    background: white;
+}
 
 main {
     max-width: 800px;
@@ -109,13 +112,86 @@ audio {
     width: 100%;
 }
 
-.row{
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    flex-direction: row;
+section{
+    width: 80%;
+    max-width: 1080px;
+    margin: 100px auto;
 }
 
-.feaures-container{
+.column-reverse {
     display: flex;
-    flex: 1;
+    align-items: space-between;
+    gap: 20px;
+    flex-direction: row-reverse;  /* Add this line */
+    background-color: rgb(220, 209, 194);
+    padding: 100px;
+}
+
+.column{
+    display: flex;
+    align-items: space-between;
+    gap: 20px;
+    background-color: red;
+    padding: 100px;
+}
+
+.column > div{
+    min-width: 320px;
+}
+
+img {
+    width: 100%;
+}
+
+.d1{
+    justify-content: inherit;
+}
+
+.d2{
+    flex: 1.5;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+h2{
+    text-wrap: nowrap;
+}
+
+p{
+   display: inline-block;
+   font-size: var(--p);
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+.single-pricing{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    margin: 20px 0;
+    background: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* .single-pricing .deal changes the background color of the deal */
+
+.single-pricing .deal{
+    background: blue;
+    color: white;
+    padding: 5%;
+    border-radius: 10px;
+    margin: -25px;
+
 }

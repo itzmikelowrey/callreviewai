@@ -65,27 +65,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function uploadFile(file) {
         const formData = new FormData();
-        formData.append('audio', file);
+        formData.append('audioFile', file);
 
-        fetch('/upload', {
+        fetch('http://localhost:3000/upload', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => {
+                    throw new Error(`Upload failed: ${text}`);
+                });
+            }
+            return response.json();
+        })
         .then(data => {
-            console.log('Transcription:', data.transcription);
-            // TODO: Display transcription and AI analysis results
+            console.log('Upload successful:', data);
+            updateUploadProgress(100);
         })
         .catch(error => {
             console.error('Error:', error);
+            alert(`An error occurred while uploading the file: ${error.message}`);
         });
     }
 
-    function displayResults(data) {
+    function displayResults(data, file) {
         // In a real app, this is where you'd call your backend to process the file
         resultsSection.hidden = false;
-        transcript.innerHTML = '<h3>Transcript</h3><p>This is a simulated transcript of the call...</p>';
-        feedback.innerHTML = '<h3>AI Feedback</h3><p>Here\'s some simulated AI feedback on the call...</p>';
+        transcript.innerHTML = `<h3>Transcript</h3><p>${data.transcription || 'Transcription not available.'}</p>`;
+        feedback.innerHTML = `<h3>AI Feedback</h3><p>${data.feedback || 'AI feedback not available.'}</p>`;
         audioElement.src = URL.createObjectURL(file);
     }
 });
